@@ -41,5 +41,17 @@ public class MyHashMapTest {
 	}
 	
 	/* Add more of your tests below */
+	@Test
+	public void testPutAndGet() {
+		testMap.put(TEST_KEY, TEST_VAL);
+		assertEquals(TEST_VAL, testMap.get(TEST_KEY));
+	}
+	
+	@Test
+	public void testReplace_existingKey() {
+		testMap.put(TEST_KEY, TEST_VAL);
+		assertTrue(testMap.replace(TEST_KEY, "New Value"));
+		assertEquals("New Value", testMap.get(TEST_KEY));
+	}
 	
 }
