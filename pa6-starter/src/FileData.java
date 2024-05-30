@@ -6,11 +6,16 @@ public class FileData {
 
     // TODO
     public FileData(String name, String directory, String modifiedDate) {
-
+        this.name = name;
+        this.dir = directory;
+        this.lastModifiedDate = modifiedDate;
     }
 
     // TODO
     public String toString() {
-
-    }
+        return "FileData {name='" + name + '\'' +
+        ", dir='" + dir + '\'' +
+        ", lastModifiedDate='" + lastModifiedDate + '\'' +
+        '}';
+}
 }
